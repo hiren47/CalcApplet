@@ -48,22 +48,23 @@ public class CalculatorTest {
 
 	@Test(expected = Exception.class)
 	public void testDivisionException() throws Exception {
-		calculator.divison(10, 0);
+		int result = calculator.divison(10, 0);
+//		assertEquals(0,0);
 	}
 
-	@Ignore
+//	@Ignore
 	@Test
 	public void testEqual() {
 		boolean result = calculator.equalIntegers(20, 20);
 
-		assertFalse(result);
+		assertTrue(result);
 	}
 
-	@Ignore
+//	@Ignore
 	@Test
 	public void testSubstraction() {
-		int result = 10 - 3;
+		int result = calculator.subtraction(10, 3);
 
-		assertTrue(result == 9);
+		assertEquals(7,result);
 	}
 }
